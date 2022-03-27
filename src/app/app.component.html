@@ -1,11 +1,14 @@
 <mat-drawer-container autosize>
   <mat-drawer #drawer mode="over">
     <mat-action-list>
-      <button mat-list-item>
+      <button (click)="goTo('')" mat-list-item>
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button (click)="goTo('resume')" mat-list-item>
         <mat-icon>description</mat-icon>
         <span>Resume</span>
       </button>
-      <button mat-list-item>LinkedIn</button>
     </mat-action-list>
   </mat-drawer>
 
