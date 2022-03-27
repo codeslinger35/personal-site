@@ -1,0 +1,23 @@
+<mat-drawer-container autosize>
+  <mat-drawer #drawer mode="over">
+    <mat-action-list>
+      <button mat-list-item>
+        <mat-icon>description</mat-icon>
+        <span>Resume</span>
+      </button>
+      <button mat-list-item>LinkedIn</button>
+    </mat-action-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="toggleDrawer()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Colby Benway</span>
+      <span class="spacer"></span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+
+</mat-drawer-container>
