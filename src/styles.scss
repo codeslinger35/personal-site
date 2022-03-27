@@ -12,7 +12,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 button {
     padding: 16px;
-    max-width: 256px;
 }
 
 mat-icon {
@@ -43,4 +42,10 @@ mat-form-field{
         grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
         grid-gap: 0px 16px;
     }
+}
+
+.larger-icon {
+    font-size: 64px;
+    width: 64px !important;
+    height: 64px !important;
 }
