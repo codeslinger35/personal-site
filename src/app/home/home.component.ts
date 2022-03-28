@@ -30,11 +30,10 @@ export class HomeComponent implements OnInit {
   }
 
   public saveName() {
-    if (this.formData.valid) {
+    if (this.formData.valid && this.formData.controls['name'].value.length > 0) {
       this.nameSubmitted = true;
       this.cache.username = this.formData.controls['name'].value;
     }
-    //just overrides the submt in  the form 
   }
 
 }

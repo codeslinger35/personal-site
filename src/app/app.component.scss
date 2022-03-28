@@ -4,6 +4,7 @@ mat-drawer-container {
 }
 
 mat-drawer {
-    width: 20vw;
     height: 100vh;
+    width: auto;
+    padding: 8px;
 }
