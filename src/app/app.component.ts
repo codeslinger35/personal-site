@@ -14,11 +14,17 @@ export class AppComponent {
 
   drawerOpen: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.router.navigate([``]);
+  }
 
   public toggleDrawer() {
     this.drawerOpen = !this.drawerOpen;
     this.drawer.toggle();
+  }
+
+  public github() {
+    window.open('https://www.github.com/codeslinger35', '__blank');
   }
 
   public goTo(route: string) {

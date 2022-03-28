@@ -1,8 +1,33 @@
 <div class="card-wrapper">
     <mat-card>
-        <mat-card-title>Resume</mat-card-title>
-        <mat-card-content>
-            <p>Here are some things you should know about me {{name}}</p>
-        </mat-card-content>
+        <mat-card-title style="display: flex; justify-content: center;">Resume</mat-card-title>
     </mat-card>
+</div>
+
+<div class="card-wrapper">
+    <mat-accordion multi>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Experience</mat-panel-title>
+                <mat-panel-description>I know this is why you are here {{name}}</mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>
+                I have worked as an intern at <a href="https://www.tylertech.com">Tyler Technologies</a> since May 2019. 
+                My responsibilities have grown to being a top contributor on the companies largest projects. I take part in 
+                learning new technologies, implementing new tech stacks, and designing enterprise grade applications. I help train 
+                newer employees and lead team wide training sessions for the technologies I implement.
+            </p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Education</mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>
+                I attend Rochester Institute of Technology (RIT) with an expected graduation of May 2023. I am 
+                majoring in software engineering and minoring in entrepreneurship, and my immersion is in economics. 
+                My current cumulative GPA is 3.84. I have been on the dean's list every semester I've taken classes, and 
+                I qualified for the presidents scholarship when I was accepted.
+            </p>
+        </mat-expansion-panel>
+    </mat-accordion>
 </div>
