@@ -3,6 +3,10 @@
 
 @include mat.core();
 
+* {
+    padding: 16px;
+}
+
 html, 
 body,
 app-root { 
