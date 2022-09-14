@@ -1,66 +1,27 @@
-<div class="card-wrapper">
-    <mat-card style="width: 75vw;">
-        <mat-card-title>Welcome {{ name}}!</mat-card-title>
-        <mat-card-content style="justify-content: center;">
-            <p *ngIf="!nameSubmitted">Before we get started... Whats your name?</p>
-            <form [formGroup]="formData" class="form">
-                <div class="app-grid">
-                    <div class="app-grid-row">
-                        <mat-form-field style="justify-self: center;" appearance="fill">
-                            <mat-label for="name">I will call you...</mat-label>
-                            <input formControlName="name" matInput type="text" id="name" autocomplete="off">
-                        </mat-form-field>
-                    </div>
-                    <div class="app-grid-row">
-                        <button style="width: 256px; justify-self: center;" mat-raised-button type="submit" color="primary" (click)="saveName()">This is me!</button>
-                    </div>
-                </div>
-            </form>
-        </mat-card-content>
-    </mat-card>
-</div>
-
-<div class="app-grid" *ngIf="nameSubmitted">
-    <div class="app-grid-row">
-        <div class="card-wrapper">
-            <mat-card role="group" style="width: 75vw;">
-                <mat-card-header>
-                    <mat-card-title>Hobbies</mat-card-title>
-                </mat-card-header>
-                    <div class="app-grid">
-                        <div class="app-grid-row">
-                            <div class="card-wrapper">
-                                <mat-card role="region">
-                                    <mat-icon class="larger-icon" color="accent">sports_hockey</mat-icon>
-                                    <p>I am the president of RIT's roller hockey team and play men's league wherever I find myself</p>
-                                </mat-card>
-                            </div>
-                            <div class="card-wrapper">
-                                <mat-card>
-                                    <mat-icon class="larger-icon">code</mat-icon>
-                                    <p>While I write software for a job, I love it so much I spend my free time writing code as well</p>
-                                </mat-card>
-                            </div>
-                            <div class="card-wrapper">
-                                <mat-card>
-                                    <mat-icon class="larger-icon" color="primary">sailing</mat-icon>
-                                    <p>There is nothing better than boating around the islands on Maine's coast in the summer</p>
-                                </mat-card>
-                            </div>                    
-                        </div>
-                    </div>
-            </mat-card>
-        </div>
+<div class="app-grid">
+    <div class="app-grid-row--three">
+        <forge-card outlined>
+            <p class="forge-typography--body1">
+                I am the president of RIT's Roller Hockey club and skate in men's leagues wherever I find myself!
+            </p>
+        </forge-card>
+        <forge-card outlined>
+            <p class="forge-typography--body1">
+                I work on personal coding projects to learn new technologies and challenge myself outside work. Currently expirmenting with AWS and Docker!
+            </p>
+        </forge-card>
+        <forge-card outlined>
+            <p class="forge-typography--body1">
+                My second love is the ocean, and my favorite summer spot is on Lower Goose Island in Casco Bay Maine! I spend as much time on the water as I can year round.
+            </p>
+        </forge-card>
     </div>
     <div class="app-grid-row">
-        <div class="card-wrapper">
-            <mat-card style="width: 75vw;">
-                <mat-card-title>My dog</mat-card-title>
-                <mat-card-subtitle>His name is Casco!</mat-card-subtitle>
-                <img mat-card-image src="assets/pics/IMG_0367.png" alt="My dog" height="auto">
-
-                <p style="font-size: 10px;">no you can't have him</p>
-            </mat-card>
-        </div>
+        <forge-card>
+            <div style="display: flex; justify-content: center;">
+                <img slot="body" src="assets/pics/IMG_0367.png" alt="My dog" height="512px">
+            </div>
+            <p class="forge-typography--body1">This is my dog Casco. He travels all over the place with me and might be the most energetic dood you've met.</p>
+        </forge-card>
     </div>
 </div>

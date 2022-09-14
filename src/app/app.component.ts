@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatDrawer } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
+import { IListItemSelectEventData } from '@tylertech/forge';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  @ViewChild(MatDrawer) drawer!: MatDrawer;
   title = 'colby-benway';
 
   drawerOpen: boolean = false;
@@ -20,14 +19,13 @@ export class AppComponent {
 
   public toggleDrawer() {
     this.drawerOpen = !this.drawerOpen;
-    this.drawer.toggle();
   }
 
   public github() {
     window.open('https://www.github.com/codeslinger35', '__blank');
   }
 
-  public goTo(route: string) {
-    this.router.navigate([route]).then(() => {this.drawer.toggle()});
+  public goTo(selected: IListItemSelectEventData) {
+    this.router.navigate([selected.value]).then( () => this.toggleDrawer());
   }
 }

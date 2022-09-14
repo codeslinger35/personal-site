@@ -17,4 +17,8 @@ export class ResumeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public openLinkedIn() {
+    window.open('https://www.linkedin.com/in/colbybenway/', '_blank');
+  }
+
 }

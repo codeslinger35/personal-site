@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { AppCacheService } from '../services/app-cache.service';
 
 @Component({
@@ -13,8 +13,8 @@ export class HomeComponent implements OnInit {
     return this.cache.username;
   }
 
-  public formData: FormGroup = new FormGroup({
-    name: new FormControl(Validators.required)
+  public formData: UntypedFormGroup = new UntypedFormGroup({
+    name: new UntypedFormControl(Validators.required)
   });
 
   public nameSubmitted: boolean = false;
