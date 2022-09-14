@@ -1,4 +1,4 @@
-<mat-drawer-container autosize>
+<!-- <mat-drawer-container autosize>
   <mat-drawer #drawer mode="over">
     <mat-action-list>
       <button (click)="goTo('')" mat-list-item>
@@ -28,4 +28,27 @@
     
   </mat-drawer-content>
 
-</mat-drawer-container>
+</mat-drawer-container> -->
+<forge-scaffold>
+  <forge-app-bar slot="header" title-text="Colby Benway">
+    <forge-app-bar-menu-button (click)="toggleDrawer()" slot="start"></forge-app-bar-menu-button>
+  </forge-app-bar>
+
+  <forge-drawer slot="body-left" [open]="drawerOpen" direction="left">
+    <forge-list (forge-list-item-select)="goTo($event.detail)">
+      <forge-list-item value="">
+        <forge-icon name="home" slot="leading"></forge-icon>
+        <span slot="title">Home</span>
+      </forge-list-item>
+      <forge-list-item value="resume">
+        <forge-icon name="description" slot="leading"></forge-icon>
+        <span slot="title">Resume</span>
+      </forge-list-item>
+    </forge-list>
+  </forge-drawer>
+
+  <div slot="body">
+    <router-outlet></router-outlet>
+  </div>
+</forge-scaffold>
+

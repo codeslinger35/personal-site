@@ -1,83 +1,49 @@
-<div class="card-wrapper">
-    <mat-card>
-        <mat-card-title style="display: flex; justify-content: center;">Resume</mat-card-title>
-    </mat-card>
-</div>
-
-<div class="card-wrapper">
-    <mat-accordion multi>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>Experience</mat-panel-title>
-                <mat-panel-description>I know this is why you are here {{name}}</mat-panel-description>
-            </mat-expansion-panel-header>
-            <p>
-                I have worked as an intern at <a href="https://www.tylertech.com" rel="external" target="_blank">Tyler Technologies</a> since May 2019. 
-                My responsibilities have grown to being a top contributor on the companies largest projects. I take part in 
-                learning new technologies, implementing new tech stacks, and designing applications. I help train 
-                newer employees and lead team wide training sessions for the technologies I implement. My biggest projects include 
-                full-stack rewrites of enterprise web applications that involved overhauling the UI in Angular 12 and porting the 
-                backend logic to Genero RESTful APIs. Next time you are at your local city hall, ask them what software they use - 
-                I might've squashed bugs in it. 
-            </p>
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>Education</mat-panel-title>
-            </mat-expansion-panel-header>
-            <p>
-                I attend Rochester Institute of Technology (RIT) with an expected graduation of May 2023. I am 
-                working towards a Bachelor of Science in software engineering and a minor in entrepreneurship, 
-                and my immersion is in economics. My current cumulative GPA is 3.84 (but you wouldn't judge me by a 
-                single number, would you {{name}}). I have been on the dean's list every semester I've taken classes, 
-                and I qualified for the presidents scholarship when I was accepted.
-            </p>
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>Hockey</mat-panel-title>
-            </mat-expansion-panel-header>
-            <p>
+<tcw-scaffold>
+    <forge-accordion slot="body">
+        <forge-expansion-panel>
+            <div role="button" tabindex="0" slot="header" class="expansion-panel-header">
+                <div class="forge-typography--title">Education</div>
+                <forge-open-icon></forge-open-icon>
+            </div>
+            <div><p class="forge-typography--body1">I will graduate from the Rochester Institute of Technology in May of 2023 with a BS in Software Engineering, a minor in Entrepreneurship, and an immersion in Economics; my cumulative GPA is 3.83.</p></div>
+        </forge-expansion-panel>
+        <forge-expansion-panel>
+            <div role="button" tabindex="0" slot="header" class="expansion-panel-header">
+                <div class="forge-typography--title">Job Experience</div>
+                <forge-open-icon></forge-open-icon>
+              </div>
+              <div>
+                <p class="forge-typography--body1">
+                    I have worked as an intern at <a href="https://www.tylertech.com" rel="external" target="_blank">Tyler Technologies</a> since May 2019. 
+                    My responsibilities have grown to being a top contributor on the companies largest projects. I take part in 
+                    learning new technologies, implementing new tech stacks, and designing applications. I help train 
+                    newer employees and lead team wide training sessions for the technologies I implement. My biggest projects include 
+                    full-stack rewrites of enterprise web applications that involved overhauling the UI in Angular 12 and porting the 
+                    backend logic to Genero RESTful APIs. Next time you are at your local city hall, ask them what software they use - 
+                    I might've squashed bugs in it. 
+                </p>
+              </div>
+        </forge-expansion-panel>
+        <forge-expansion-panel>
+            <div role="button" tabindex="0" slot="header" class="expansion-panel-header">
+                <div class="forge-typography--title">Hockey</div>
+                <forge-open-icon></forge-open-icon>
+              </div>
+              <div>
+                <p class="forge-typography--body1">
                 I have been on skates since I was 2 and playing hockey not long after that. I spent lots of weekends in rinks 
                 trying to make it big - this website's existence tells you all you need to know about how that went. I am still 
                 passionate about the game and play men's league wherever I can. I am currently the president of RIT's roller hockey 
                 team which participates in the ECRHA (<a href="https://ritroller.com" rel="external" target="_blank">check it out</a>). 
-                By the way, I'm a Bruins fan. Hope that's not a dealbreaker {{name}}.
-            </p>
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>Technologies</mat-panel-title>
-            </mat-expansion-panel-header>
-            <p>
-                The fun stuff! This is what I have the most experience with in no particular order:
-            </p>
-            <mat-list role="list">
-                <mat-list-item role="listitem">Typescript</mat-list-item>
-                <mat-list-item role="listitem">Java</mat-list-item>
-                <mat-list-item role="listitem">Python</mat-list-item>
-                <mat-list-item role="listitem">Angular</mat-list-item>
-                <mat-list-item role="listitem">HTML/CSS</mat-list-item>
-                <mat-list-item role="listitem">SQL</mat-list-item>
-                <mat-list-item role="listitem">AWS (serverless stuff, particularly)</mat-list-item>
-              </mat-list>
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>Can I do anything else?</mat-panel-title>
-            </mat-expansion-panel-header>
-            <p>
-                Of course I can {{name}}! My soft skills include problem solving, communication, punctuality, motivation, 
-                and dedication. Want a problem solved efficientlty in a short amount of time? I'm your guy.
-            </p>
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>LinkedIn</mat-panel-title>
-            </mat-expansion-panel-header>
-            <p>
-                Connect with me on LinkedIn <a href="https://www.linkedin.com/in/colbybenway/" rel="external" target="_blank">here</a>.
-            </p>
-        </mat-expansion-panel>
-    </mat-accordion>
-</div>
+                By the way, I'm a Bruins fan, hope that's not a dealbreaker.
+                </p>
+              </div>
+        </forge-expansion-panel>
+    </forge-accordion>
+
+    <forge-toolbar slot="footer">
+        <forge-button slot="end">
+            <button type="button" (click)="openLinkedIn()">Connect on LinkedIn</button>
+        </forge-button>
+    </forge-toolbar>
+</tcw-scaffold>
