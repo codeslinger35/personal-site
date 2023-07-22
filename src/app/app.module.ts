@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResumeComponent } from './resume/resume.component';
+import { DogComponent } from './dog/dog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ResumeComponent
+    ResumeComponent,
+    DogComponent
   ],
   imports: [
     BrowserModule,
