@@ -1,34 +1,3 @@
-<!-- <mat-drawer-container autosize>
-  <mat-drawer #drawer mode="over">
-    <mat-action-list>
-      <button (click)="goTo('')" mat-list-item>
-        <mat-icon>home</mat-icon>
-        <span>Home</span>
-      </button>
-      <button (click)="goTo('resume')" mat-list-item>
-        <mat-icon>description</mat-icon>
-        <span>Resume</span>
-      </button>
-    </mat-action-list>
-  </mat-drawer>
-
-  <mat-drawer-content>
-    <mat-toolbar color="primary">
-      <button mat-icon-button (click)="toggleDrawer()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>Colby Benway</span>
-      <span class="spacer"></span>
-      <button mat-button matTooltip="I have two accounts, don't be mad..." (click)="github()">
-        <mat-icon>terminal</mat-icon>
-        <span>My github</span>
-      </button>
-    </mat-toolbar>
-    <router-outlet></router-outlet>
-    
-  </mat-drawer-content>
-
-</mat-drawer-container> -->
 <forge-scaffold>
   <forge-app-bar slot="header" title-text="Colby Benway">
     <forge-app-bar-menu-button (click)="toggleDrawer()" slot="start"></forge-app-bar-menu-button>
@@ -43,6 +12,10 @@
       <forge-list-item value="resume">
         <forge-icon name="description" slot="leading"></forge-icon>
         <span slot="title">Resume</span>
+      </forge-list-item>
+      <forge-list-item value="dog">
+        <forge-icon name="dog" slot="leading"></forge-icon>
+        <span slot="title">My dog</span>
       </forge-list-item>
     </forge-list>
   </forge-drawer>
